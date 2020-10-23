@@ -1,0 +1,111 @@
+1) how do you debug the Python program?
+python -m pdb python-script.py
+
+2)what is yield keyword in python?
+
+A) the yield keyword in python can return any function into a generator.
+yields work like a standard return keywords
+
+But its always return a generator objects.
+
+def testgen(index):
+weekdays = ['sun','mon','tue','wed','thu','fri','sat']
+yield weekdays[index]
+yield weekdays[index+1]
+day = testgen(0)
+for i in day:
+    print(i)
+
+
+3) how to convert list into string:
+ When we want to convert a list into a string,
+ we can use the <”.join()> method which joins all the elements into one and returns as a string.
+
+weekdays = ['sun','mon','tue','wed','thu','fri','sat']
+listAsString = ' '.join(weekdays)
+print(listAsString)P
+
+4)how to convert list to tuple:
+weekdays = ['sun','mon','tue','wed','thu','fri','sat']
+listAsTuple = tuple(weekdays)
+print(listAsTuple)
+
+5)how to convert list to set:
+weekdays = ['sun','mon','tue','wed','thu','fri','sat','sun','tue']
+listAsSet = set(weekdays)
+print(listAsSet)
+
+
+6)how to convert the occurrences of particular elements in the list?
+weekdays = ['sun','mon','tue','wed','thu','fri','sun','mon','mon']
+print(weekdays.count('mon'))
+
+Example # 2:
+
+weekdays = ['sun','mon','tue','wed','thu','fri','sun','mon','mon']
+print([[x,weekdays.count(x)] for x in set(weekdays)])
+
+9) What is a negative index in Python?
+
+A) Python has a special feature like a negative index in Arrays and Lists.
+Positive index reads the elements from the starting of an array or list but in the negative index,
+ Python reads elements from the end of an array or list.
+
+10) What is the output of the below code?
+
+>> import array
+>>> a = [1, 2, 3]
+>>> print a[-3]
+>>> print a[-2]
+>>> print a[-1]
+A) The output is: 3, 2, 1
+
+11) What is the output of the below program?
+names = ['Chris', 'Jack', 'John', 'Daman']
+print(names[-1][-1])
+
+12) What is Enumerate() Function in Python?
+
+A) The Python enumerate() function adds a counter to an iterable object.
+enumerate() function can accept sequential indexes starting from zero.
+
+subjects = ('Python', 'Interview', 'Questions')
+for i, subject in enumerate(subjects):
+print(i, subject)
+Output:
+
+0 Python
+1 Interview
+2 Questions
+
+14) How do you Concatenate Strings in Python?
+
+A) We can use ‘+’ to concatenate strings.
+
+Python Concatenating Example:
+
+# See how to use ‘+’ to concatenate strings.
+
+>>> print('Python' + ' Interview' + ' Questions')
+# Output:
+
+15) How to generate random numbers in Python?
+
+A) We can generate random numbers using different functions in Python. They are:
+
+#1. random() – This command returns a floating point number, between 0 and 1.
+
+#2. uniform(X, Y) – It returns a floating point number between the values given as X and Y.
+
+#3. randint(X, Y) – This command returns a random integer between the values given as X and Y.
+
+16) How to print sum of the numbers starting from 1 to 100?
+
+A) We can print sum of the numbers starting from 1 to 100 using this code:
+
+print sum(range(1,101))
+
+20) What is the output when we execute list(“hello”)?
+
+A) [‘h’, ‘e’, ‘l’, ‘l’, ‘o’]
+
